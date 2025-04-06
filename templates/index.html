@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Decola Tech - IA Generativa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Lab de IA Generativa</h1>
+        
+        <div class="section">
+            <h2>Gerador de Texto Criativo</h2>
+            <textarea id="prompt" placeholder="Digite seu prompt aqui..."></textarea>
+            <button onclick="generateText()">Gerar Texto</button>
+            <div id="generation-result" class="result-box"></div>
+            <div id="token-usage"></div>
+        </div>
+
+        <div class="section">
+            <h2>Filtro de Conteúdo</h2>
+            <textarea id="moderation-text" placeholder="Texto para moderação..."></textarea>
+            <button onclick="moderateContent()">Verificar Conteúdo</button>
+            <div id="moderation-result" class="result-box"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
